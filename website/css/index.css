@@ -1,0 +1,307 @@
+.w {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+/* 字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../icomoon/fonts/icomoon.eot?tomleg');
+  src: url('../icomoon/fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+    url('../icomoon/fonts/icomoon.ttf?tomleg') format('truetype'),
+    url('../icomoon/fonts/icomoon.woff?tomleg') format('woff'),
+    url('../icomoon/fonts/icomoon.svg?tomleg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  width: 1500px;
+  height: 720px;
+  overflow: scroll;
+}
+
+.top {
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(13, 110, 253);
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px 3px rgba(0, 0, 0, .2);
+}
+
+.main {
+  position: absolute;
+  width: inherit;
+  height: 670px;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+/* nav模块 */
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  font-size: 14px;
+  /* border-bottom: 2px solid rgb(13, 110, 253); */
+  border-radius: 10px 0 0 5px;
+  background-color: #fff;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav .topUl {
+  height: 70%;
+}
+
+.nav .bottomUl {
+  flex: 1;
+}
+
+.nav li label,
+.nav .toggle,
+.left .ico-left,
+.right .ico-right {
+  padding: 0 10px;
+  width: 100%;
+  font-family: "icomoon";
+  color: rgb(78, 90, 112);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.left .ico-left,
+.right .ico-right {
+  color: rgb(170, 170, 170);
+}
+
+
+.nav li:hover {
+  background-color: rgb(220, 228, 248);
+  color: rgb(91, 137, 254);
+}
+
+.nav .new-ipt,
+.nav .folder-ipt {
+  display: none;
+}
+
+/* 文件夹模块 */
+.fileShow {
+  height: inherit;
+  width: 200px;
+  border-radius: 2px;
+  overflow: auto;
+  padding-left: 5px;
+  background-color: #fff;
+  /* background-color: rgb(223, 217, 211); */
+}
+
+.name {
+  padding: 5px 0;
+  padding-left: 5px;
+}
+
+.file-icon {
+  color: rgb(78, 90, 112);
+  font-family: "icomoon";
+}
+
+.originImg,
+.newImg {
+  background-color: #fff;
+}
+
+
+.folder {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  /* background-color: purple; */
+  line-height: 20px;
+  margin-left: 5px;
+  /* padding-left: 10px; */
+  cursor: pointer;
+}
+
+.subfolder-name {
+  margin-left: -3px;
+}
+
+.fo-file ul {
+  margin: 0;
+}
+
+.fo-file ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon-on {
+  font-family: 'icomoon';
+  color: rgb(78, 90, 112);
+  margin-right: 5px;
+}
+
+.icon-off {
+  font-family: 'icomoon';
+  color: rgb(78, 90, 112);
+  margin-right: 5px;
+}
+
+.folder-name {
+  font-size: 13px;
+}
+
+.fo-file {
+  margin-left: 23px;
+  display: none;
+}
+
+
+
+/* workSpace模块 */
+.workSpace {
+  flex: 1;
+  position: relative;
+  /* background-color: pink; */
+  margin-left: 10px;
+  background-color: rgb(248, 249, 250);
+}
+
+.wsTop {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  background-color: #fff;
+  border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+
+
+.workImg {
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+
+.buttons-autoMode,
+.buttons {
+  position: absolute;
+  overflow: hidden;
+  width: 100px;
+  height: 400px;
+  top: 100px;
+  left: 800px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #C0C0C0;
+  z-index: 3;
+}
+
+.buttons-autoMode {
+  display: block;
+}
+
+.buttons {
+  display: none;
+}
+
+.buttons-autoMode .btnsTop,
+.buttons .btnsTop {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  /* background-color: skyblue; */
+  border-bottom: 2px solid rgb(211, 211, 211);
+  cursor: move;
+  touch-action: none;
+}
+
+.buttons-autoMode ul,
+.buttons ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.buttons-autoMode ul li,
+.buttons ul li {
+  margin: 5px 5px;
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  /* cursor: url(../image/eraser.cur), auto; */
+}
+
+/* .box canvas {
+  box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, .2),
+    -2px 0px 2px 0px rgba(0, 0, 0, .2),
+    2px 0px 2px 0px rgba(0, 0, 0, .2),
+    0px 2px 2px 0px rgba(0, 0, 0, .2);
+} */
+
+.workSpace img {
+  position: absolute;
+}
+
+.drawingCanvas {
+  position: absolute;
+}
+
+.mouse {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  /* border-radius: 50%; */
+  background-color: rgba(232, 177, 164, 1);
+}
+
+.line {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  /* top: 100px; */
+  height: 2px;
+  width: 400px;
+  background-color: rgba(232, 177, 164, 1);
+}
+
+.Vertical {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  width: 2px;
+  height: 400px;
+  background-color: rgba(232, 177, 164, 1);
+}
